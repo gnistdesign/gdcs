@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="MyCustomStandard">
+  <description>A custom set of rules to check for a WPized WordPress project</description>
+
+  <!-- Exclude the Composer Vendor directory. -->
+  <exclude-pattern>/vendor/*</exclude-pattern>
+
+  <!-- Exclude the Node Modules directory. -->
+  <exclude-pattern>/node_modules/*</exclude-pattern>
+
+  <!-- Exclude minified Javascript files. -->
+  <exclude-pattern>*.min.js</exclude-pattern>
+
+  <!-- Include the Gnist Design Coding Standard for WordPress. -->
+  <rule ref="GnistDesignWP" />
+
+  <!-- Text domain. -->
+  <rule ref="WordPress.WP.I18n">
+    <properties>
+      <property name="text_domain" type="array">
+        <element value="my-textdomain"/>
+        <element value="library-textdomain"/>
+      </property>
+    </properties>
+  </rule>
+
+  <!-- Prefix. -->
+  <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+    <properties>
+      <property name="prefixes" type="array">
+        <element value="my_prefix"/>
+      </property>
+    </properties>
+  </rule>
+</ruleset>

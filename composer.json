@@ -1,0 +1,62 @@
+{
+	"name": "gnistdesign/gdcs",
+	"type": "phpcodesniffer-standard",
+	"description": "PHP_CodeSniffer rules (sniffs) to enforce Gnist Design/WordPress coding conventions",
+	"keywords": [
+		"phpcs",
+		"standards",
+		"WordPress",
+		"Gnist Design"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Henrik Jakobsen",
+			"homepage": "https://gnistdesign.no/",
+			"role": "Developer"
+		},
+		{
+			"name": "Stian Andreassen",
+			"homepage": "https://gnistdesign.no/",
+			"role": "Developer"
+		},
+		{
+			"name": "Sarah Galantini",
+			"homepage": "https://gnistdesign.no/",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=7.3",
+		"squizlabs/php_codesniffer": "^3.3.1"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+		"wp-coding-standards/wpcs": "^2.3",
+		"phpcompatibility/php-compatibility": "^9.0",
+		"phpcompatibility/phpcompatibility-paragonie": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"automattic/phpcs-neutron-standard": "^1.6"
+	},
+	"suggest": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
+		"roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
+	},
+	"prefer-stable" : true,
+	"scripts": {
+		"check-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcs"
+		],
+		"fix-cs": [
+			"@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+		],
+		"install-codestandards": [
+			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+		]
+	},
+	"support": {
+		"issues": "https://github.com/gnistdesign/gdcs/issues",
+		"wiki": "https://github.com/gnistdesign/gdcs/wiki",
+		"source": "https://github.com/gnistdesign/gdcs"
+	}
+}
