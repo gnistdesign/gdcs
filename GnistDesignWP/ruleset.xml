@@ -67,12 +67,12 @@
   <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
   <rule ref="Generic.Commenting.Todo" />
 
-	<rule ref="Generic.WhiteSpace.ScopeIndent">
+	<!-- <rule ref="Generic.WhiteSpace.ScopeIndent">
     <properties>
       <property name="tabIndent" value="true" />
       <property name="exact" value="true" />
     </properties>
-	</rule>
+	</rule> -->
 
   <!-- Verify that no WP functions are used which are deprecated or have been removed.
      The minimum version set here should be in line with the minimum WP version
